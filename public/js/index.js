@@ -1,11 +1,12 @@
 var anElement = document.getElementById("app");
 
 anElement.innerHTML= "Hello world";
-anElement.outerHTML="Hello world";
+//anElement.outerHTML="<h1>Hello world</h1>";
 
-anElement.innerHTML = <button onClick='buttonClick()'> Click me</button>;
+//anElement.innerHTML = "<button onClick='buttonClick()'> Click me</button>";
 
 
 function buttonClick() {
-    anElement.outerHTML = <strong>Yaffet</strong>;
+    console.log("Klicked at button!")
+    anElement.outerHTML = "<strong>Yaffet</strong>";
 }

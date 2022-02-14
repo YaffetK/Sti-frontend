@@ -1,7 +1,7 @@
 var anElement = document.getElementById("app");
 
-anElement.innerHTML= "Hello World";
-anElement.outerHTML= "Hello World";
+anElement.innerHTML= "<button oneclick='buttonClick()'> Click me</button>";
+
 
 function buttonClick(){
     anElement.outerHTML = "<strong>Yaffet</strong>"

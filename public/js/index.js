@@ -1,6 +1,6 @@
 var anElement = document.getElementById("app");
 
-anElement.innerHTML= "<button oneclick='buttonClick()'> Click me</button>";
+anElement.innerHTML= <button oneclick='buttonClick()'> Click me</button>;
 
 
 function buttonClick(){

@@ -1,7 +1,25 @@
 var anElement = document.getElementById("app");
 
+var anotherElement=document.getElementById('demo');
+
+anotherElement.innerHTML= "Här kommer dagens datum stå:";
+
+function buttonClickForDate() {
+    console.log("Dagens datum")
+    anotherElement.innerHTML= Date();
+}
+
+var ettElement=document.createElement("strong");
+ettElement.innerHTML("Hello My World");
+
+var app=getElementById("app")
+app.appendChild(anElement);
+
+
+
 anElement.innerHTML= "Hello world";
-//anElement.outerHTML="<h1>Hello world</h1>";
+console.log(anElement);
+
 
 //anElement.innerHTML = "<button onClick='buttonClick()'> Click me</button>";
 

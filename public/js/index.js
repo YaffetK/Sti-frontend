@@ -21,7 +21,7 @@ function buttonClickForDate(){
 
 function buttonClick() {
     console.log("Klicked at button!")
-    skapatElement.outerHTML = "<strong>Yaffet</strong>"
+    skapatElement.innerHTML = "<strong>Yaffet</strong>"
 }
 
 function age(){

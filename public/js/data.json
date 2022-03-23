@@ -1,17 +1,35 @@
-[
-    {"name": "AIK",
-    "points": 9 
-},
 {
-    "name": "DIF",
-    "points": 6
-},
-{
-    "name": "DIF",
-    "points":5
-},
-{
-    "name": "BP",
-    "points": 3
+    "title":"Allsvenskan",
+    "table": [
+    {
+        "name": "AIK",
+        "points": 9,
+        "imgsrc": "https://www.allsvenskan.se/_/image/0c02711d-d44e-4124-a555-0df3d8264551:0fb201f22e823629dada3ee33327a5b70963120b/width-110/AIK.svg"
+    },
+    {
+        "name": "DIF",
+        "points": 6,
+        "imgsrc": "https://www.allsvenskan.se/_/image/939ceff1-1923-48b0-af9a-997dfe4fba51:126ef93a454f04822c9f8575831a0871abd06398/width-110/Djurg%C3%A5rden.svg"
+    },
+    {
+        "name": "Häcken",
+        "points":5,
+        "imgsrc": "https://www.allsvenskan.se/_/image/29528574-2d7b-43e2-9b91-89f3bfa74bdc:f981f4253c7e9711fe2c9449765cda15327af8aa/width-110/BK_H%C3%A4cken_logo.svg"
+    },
+    {
+        "name": "Degerfors IF",
+        "points": 3,
+        "imgsrc": "https://www.allsvenskan.se/_/image/e58c3846-9f1a-4bde-9ccb-99df65cc5360:c14b6bb4bc1d5954b698254ffed2e5a4593a1b6b/width-110/Degerfors%20IF.svg"
+    },
+    {
+        "name": "GIF Sundsvall",
+        "points": 3,
+        "imgsrc": "https://www.allsvenskan.se/_/image/75d2de75-b6d0-4a7d-8fc3-4ecc1a0309fc:083de91fccf06dfe18ca9eeee7364c13c7e587c2/width-110/GIF%20Sundsvall.svg"
+    },
+    {
+        "name": "Hammarby",
+        "points": 3,
+        "imgsrc": "https://www.allsvenskan.se/_/image/2d712890-bb18-4855-92fa-c8fdaae520ad:c18dd882a8d722f14665b054d25483089cf57a12/width-110/Hammarby.svg"
+    }
+    ]
 }
-]

@@ -1,53 +1,52 @@
-var ettElement= document.getElementById("app")
-ettElement.innerHTML="Hello World"
+const UPDATE_FIRST = 0;
+const UPDATE_INTERVAL = 1000;
 
-var skapatElement= document.createElement("strong")
-skapatElement.innerHTML= "Hello My World"
+var appElement=document.getElementById("app")
 
-var andraElement=document.getElementById("demo")
-andraElement.appendChild(skapatElement)
-
-setTimeout(age,3000)
-
-function age(){
- console.log("aging game")
- setTimeout(age,3000)
-}
-
-function buttonClickForDate(){
-    console.log("Today´s date is:")
-    console.log(Date())
-}
-
-function buttonClick() {
-    console.log("Klicked at button!")
-    skapatElement.innerHTML = "<strong>Yaffet</strong>"
-}
-
+setTimeout(age,UPDATE_FIRST)
 function age(){
     var xhr = new XMLHttpRequest()
+    //xhr.open("GET" , "http://yaffet-backend.herokuapp.com/fotball")
+    //xhr.open("GET" , "http://localhost:3001/fotball")
     xhr.open("GET" , "/js/data.json")
     xhr.onload = function(){
-        var data = JSON.parse(this.response)
-        createTable(data)
+        let data = JSON.parse(this.response)
+
+        console.log(data)
+        console.log(data.title)
+        console.log(data.table)
+
+        createTable(data.table)
+        setTimeout(age,UPDATE_INTERVAL)
     }
     xhr.send()
 }
 
-function createTable(data){
+function createTable(table){
+    const d = new Date();
+    let time = d.toLocaleTimeString();
+
     var appElement = document.getElementById("app")
+    appElement.textContent = ""
+
+    var aHeader = document.createElement("h1")
+    aHeader.innerHTML = time
+    appElement.appendChild(aHeader)
+    
     var aTable = document.createElement("table")
+
     appElement.appendChild(aTable)
-    aTable.appendChild(createRow(data[0].name,data[0].points))
-    aTable.appendChild(createRow(data[1].name,data[1].points))
-    aTable.appendChild(createRow(data[2].name,data[2].points))
-    aTable.appendChild(createRow(data[3].name,data[3].points))
+    for(const dataRow of table){
+        aTable.appendChild(createRow(dataRow))
+    }
+    
 }
 
-function createRow(name,points){
+function createRow(tableRow){
     var aRow=document.createElement("tr")
-    aRow.appendChild(createCell(name))
-    aRow.appendChild(createCell(points))
+    aRow.appendChild(createCell(tableRow.name))
+    aRow.appendChild(createCell(tableRow.points))
+    aRow.appendChild(createLogoCell(tableRow.imgsrc))
     return aRow
 }
 
@@ -59,15 +58,9 @@ function createCell(content){
 
 function createLogoCell(url){
     var aCell = document.createElement("td")
-
     var anImg = document.createElement("img")
-
     anImg.src = url;
-
     anImg.classList.add("logo")
-    
     aCell.appendChild(anImg)
-    
     return aCell
-    
-    }
+}
